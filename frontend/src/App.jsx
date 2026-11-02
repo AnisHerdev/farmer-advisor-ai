@@ -40,6 +40,7 @@ export default function App() {
   const [executionMode, setExecutionMode] = useState('demo');
   const [backendStatus, setBackendStatus] = useState('checking');
   const [errorMsg, setErrorMsg] = useState(null);
+  const [showArchitecture, setShowArchitecture] = useState(false);
 
   const recognitionRef = useRef(null);
   const synthRef = useRef(window.speechSynthesis);
@@ -225,15 +226,21 @@ export default function App() {
           {/* Right Controls: Mode Toggle & Language Selector */}
           <div className="flex items-center gap-3">
             {/* Engine Mode Toggle */}
-            <div className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-soil-100 border border-soil-200 text-xs text-soil-700">
-              <Cpu className="w-3.5 h-3.5 text-forest-600" />
+            <div className="hidden sm:flex items-center">
               <button
                 type="button"
                 onClick={() => setExecutionMode(executionMode === 'demo' ? 'local_agriparam' : 'demo')}
-                className="font-medium hover:text-forest-700 transition"
-                title="Toggle between instant demo response and full local AgriParam weights"
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all border ${
+                  executionMode === 'local_agriparam'
+                    ? 'bg-forest-800 text-white border-forest-900 shadow-sm ring-2 ring-forest-300'
+                    : 'bg-white hover:bg-soil-100 text-soil-700 border-soil-300'
+                }`}
+                title="Toggle between instant demo response and full local 2.86B AgriParam weights on CPU"
               >
-                {executionMode === 'demo' ? 'Fast Demo Mode' : 'AgriParam Local CPU'}
+                <Cpu className={`w-3.5 h-3.5 ${executionMode === 'local_agriparam' ? 'text-forest-200 animate-pulse' : 'text-forest-600'}`} />
+                <span>
+                  {executionMode === 'demo' ? '⚡ Fast Demo Mode' : '🧠 AgriParam CPU (2.86B)'}
+                </span>
               </button>
             </div>
 
@@ -400,22 +407,28 @@ export default function App() {
           </div>
         )}
 
-        {/* 5. Loading Skeleton */}
+        {/* 5. Loading State with Informative Progress */}
         {loading && (
-          <div className="bg-white rounded-2xl border border-soil-200 p-6 space-y-4 animate-pulse">
-            <div className="flex items-center justify-between">
-              <div className="h-5 bg-soil-200 rounded w-1/4"></div>
-              <div className="h-5 bg-soil-200 rounded w-16"></div>
+          <div className="bg-white rounded-2xl border border-soil-200 p-6 space-y-4 shadow-sm">
+            <div className="flex items-center gap-3">
+              <RefreshCw className="w-5 h-5 text-forest-700 animate-spin shrink-0" />
+              <div>
+                <p className="text-sm font-semibold text-forest-900">
+                  {executionMode === 'local_agriparam'
+                    ? 'Computing with BharatGen AgriParam (2.86B) on AMD Ryzen CPU...'
+                    : 'Retrieving Official ICAR Guidelines & Synthesizing Advisory...'}
+                </p>
+                <p className="text-xs text-soil-500">
+                  {executionMode === 'local_agriparam'
+                    ? 'Executing PyTorch transformer forward pass on CPU RAM (~15-25 seconds)...'
+                    : 'Searching 968 indexed ICAR chunks + AI4Bharat IndicTrans2 translation...'}
+                </p>
+              </div>
             </div>
-            <div className="space-y-2 pt-2">
+            <div className="space-y-2 pt-2 animate-pulse">
               <div className="h-4 bg-soil-200 rounded w-full"></div>
               <div className="h-4 bg-soil-200 rounded w-5/6"></div>
               <div className="h-4 bg-soil-200 rounded w-4/6"></div>
-            </div>
-            <div className="grid grid-cols-3 gap-3 pt-4">
-              <div className="h-20 bg-soil-100 rounded-xl"></div>
-              <div className="h-20 bg-soil-100 rounded-xl"></div>
-              <div className="h-20 bg-soil-100 rounded-xl"></div>
             </div>
           </div>
         )}
@@ -557,6 +570,67 @@ export default function App() {
             </div>
           </div>
         )}
+
+        {/* Architecture & Model Breakdown Collapsible */}
+        <div className="border-t border-soil-200 pt-4">
+          <button
+            type="button"
+            onClick={() => setShowArchitecture(!showArchitecture)}
+            className="w-full flex items-center justify-between p-3.5 rounded-xl bg-soil-100/70 hover:bg-soil-100 border border-soil-200 text-xs font-semibold text-soil-800 transition"
+          >
+            <div className="flex items-center gap-2">
+              <Layers className="w-4 h-4 text-forest-700" />
+              <span>How This System Works (Sovereign Models & RAG Architecture)</span>
+            </div>
+            {showArchitecture ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+          </button>
+
+          {showArchitecture && (
+            <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+              {/* Card 1: RAG & Embeddings */}
+              <div className="p-4 rounded-xl bg-white border border-soil-200 space-y-2 shadow-xs">
+                <div className="flex items-center gap-2 text-forest-800 font-semibold text-xs">
+                  <span className="w-5 h-5 rounded bg-forest-100 text-forest-800 flex items-center justify-center text-[10px] font-bold">1</span>
+                  <span>ChromaDB RAG & MiniLM</span>
+                </div>
+                <p className="text-[11px] text-soil-600 leading-relaxed">
+                  Indexes 968 chunks from authentic ICAR manuals & PMFBY National Crop Calendars. Encodes queries into 384-d semantic vectors to retrieve strict agronomic facts.
+                </p>
+                <div className="text-[10px] font-mono text-soil-500 bg-soil-50 p-1.5 rounded border border-soil-200">
+                  paraphrase-multilingual-MiniLM-L12-v2
+                </div>
+              </div>
+
+              {/* Card 2: IndicTrans2 Translation */}
+              <div className="p-4 rounded-xl bg-white border border-soil-200 space-y-2 shadow-xs">
+                <div className="flex items-center gap-2 text-harvest-800 font-semibold text-xs">
+                  <span className="w-5 h-5 rounded bg-harvest-100 text-harvest-800 flex items-center justify-center text-[10px] font-bold">2</span>
+                  <span>AI4Bharat IndicTrans2</span>
+                </div>
+                <p className="text-[11px] text-soil-600 leading-relaxed">
+                  Provides 2-way translation across 7 Indian languages (Hindi, Telugu, Tamil, Kannada, Marathi, Punjabi, English) so farmers can ask and receive advice in their mother tongue.
+                </p>
+                <div className="text-[10px] font-mono text-soil-500 bg-soil-50 p-1.5 rounded border border-soil-200">
+                  ai4bharat/indictrans2-*-dist-200M
+                </div>
+              </div>
+
+              {/* Card 3: BharatGen AgriParam */}
+              <div className="p-4 rounded-xl bg-white border border-soil-200 space-y-2 shadow-xs">
+                <div className="flex items-center gap-2 text-emerald-800 font-semibold text-xs">
+                  <span className="w-5 h-5 rounded bg-emerald-100 text-emerald-800 flex items-center justify-center text-[10px] font-bold">3</span>
+                  <span>BharatGen AgriParam</span>
+                </div>
+                <p className="text-[11px] text-soil-600 leading-relaxed">
+                  2.86B parameter sovereign LLM pre-trained by IIT Bombay / BharatGen specifically for Indian agriculture. Formulates structured, grounded advice without hallucination.
+                </p>
+                <div className="text-[10px] font-mono text-soil-500 bg-soil-50 p-1.5 rounded border border-soil-200">
+                  bharatgenai/AgriParam (2.86B)
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
 
       </main>
 
