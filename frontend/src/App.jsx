@@ -112,10 +112,14 @@ export default function App() {
     };
 
     recognition.onerror = (event) => {
-      console.error("Speech recognition error:", event.error);
+      console.warn("Speech recognition notice:", event.error);
       setIsListening(false);
-      if (event.error !== 'no-speech') {
-        setErrorMsg(`Microphone error: ${event.error}`);
+      if (event.error === 'network') {
+        setErrorMsg("Voice input in Chrome requires an active connection to Google's cloud speech service. You can type your query in your language directly or click one of the quick question chips below.");
+      } else if (event.error === 'not-allowed') {
+        setErrorMsg("Microphone permission was denied. Please allow microphone access in your browser address bar.");
+      } else if (event.error !== 'no-speech') {
+        setErrorMsg(`Voice input status: ${event.error}. You can type your query directly.`);
       }
     };
 

@@ -234,10 +234,13 @@ class AdvisoryKnowledgeBase:
 
                     for final_score, sem_score, meta, doc_text in scored_candidates[:top_k]:
                         confidence = min(0.98, max(0.50, round(sem_score + 0.1, 2)))
+                        doc_source = meta.get("source")
+                        doc_title = meta.get("doc_title")
+                        source_label = f"{doc_source} — {doc_title}" if doc_title and doc_source else (doc_title or doc_source or "ICAR Official Advisory Manual")
                         results.append({
                             "id": meta.get("id"),
                             "crop": meta.get("crop"),
-                            "source": meta.get("source"),
+                            "source": source_label,
                             "text": doc_text,
                             "confidence": confidence
                         })

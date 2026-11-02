@@ -8,6 +8,8 @@
     "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"green,blue\" \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "powershell -ExecutionPolicy Bypass -Command \"if (Test-Path .venv) { .\\.venv\\Scripts\\python.exe -m uvicorn backend.main:app --reload --port 8000 } elseif (Get-Command python -ErrorAction SilentlyContinue) { python -m uvicorn backend.main:app --reload --port 8000 } else { py -3.10 -m uvicorn backend.main:app --reload --port 8000 }\"",
     "dev:frontend": "cd frontend && npm run dev",
+    "download:pdfs": "powershell -ExecutionPolicy Bypass -Command \"if (Test-Path .venv) { .\\.venv\\Scripts\\python.exe scripts/download_icar_pdfs.py } else { python scripts/download_icar_pdfs.py }\"",
+    "download:models": "powershell -ExecutionPolicy Bypass -Command \"if (Test-Path .venv) { .\\.venv\\Scripts\\python.exe scripts/download_models.py --model lightweight } else { python scripts/download_models.py --model lightweight }\"",
     "eval": "powershell -ExecutionPolicy Bypass -Command \"if (Test-Path .venv) { .\\.venv\\Scripts\\python.exe -m backend.evaluation.evaluator } elseif (Get-Command python -ErrorAction SilentlyContinue) { python -m backend.evaluation.evaluator } else { py -3.10 -m backend.evaluation.evaluator }\""
   },
   "devDependencies": {
