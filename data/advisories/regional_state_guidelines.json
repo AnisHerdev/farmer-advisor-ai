@@ -1,0 +1,48 @@
+[
+  {
+    "id": "REG_PB_HR_01",
+    "region": "North-Western Plains (Punjab & Haryana)",
+    "primary_crops": ["Paddy", "Wheat", "Cotton", "Mustard"],
+    "agro_climatic_context": "Intensively irrigated canal and tubewell system; high vulnerability to underground water depletion and terminal heat stress in wheat during March.",
+    "key_directives": [
+      "Punjab Preservation of Subsoil Water Act: No farmer shall transplant paddy nursery before notified date (June 15-20) to curb summer water table decline.",
+      "Wheat: Timely sowing between November 1 to 20 is essential to ensure high tillering before temperatures rise in February.",
+      "Cotton: Sowing in south-western districts (Bathinda, Mansa, Sirsa) must finish by mid-May to prevent CLCuV (Cotton Leaf Curl Virus) and pink bollworm."
+    ],
+    "source": "PAU Ludhiana & CCS HAU Hisar Extension Directives"
+  },
+  {
+    "id": "REG_MH_GJ_02",
+    "region": "Central Black Soil Zone (Maharashtra & Gujarat)",
+    "primary_crops": ["Cotton", "Soybean", "Tomato", "Onion", "Chickpea"],
+    "agro_climatic_context": "Semi-arid tropics with Vertisols (deep black soils) having high moisture-retention capacity; subject to prolonged dry spells during monsoon breaks.",
+    "key_directives": [
+      "Cotton in Vidarbha and Marathwada: Sow after receiving at least 75-100 mm cumulative monsoon rain. Broad Bed and Furrow (BBF) improves in-situ rainwater conservation.",
+      "Tomato in Nashik and Pune belts: Staked cultivation with drip irrigation and silver-black plastic mulch significantly curbs fruit borer and fungal blights.",
+      "Onion: Nashik Kharif onion requires raised nursery beds to avoid damping off and purple blotch."
+    ],
+    "source": "MPKV Rahuri & PDKV Akola Agronomic Recommendations"
+  },
+  {
+    "id": "REG_AP_TS_03",
+    "region": "Southern Deccan Plateau (Andhra Pradesh & Telangana)",
+    "primary_crops": ["Cotton", "Paddy", "Chilli", "Tomato", "Redgram"],
+    "agro_climatic_context": "Red sandy loams (Chalka) and medium black soils; hot summers, high incidence of sucking pests (thrips, whiteflies, mites).",
+    "key_directives": [
+      "Cotton: High Density Planting System (HDPS) with compact non-Bt or Bt varieties at 80 cm x 20 cm spacing is recommended for Chalka soils.",
+      "Tomato in Madanapalle / Chittoor: Severe pressure of Tomato Pinworm (Tuta absoluta) and Leaf curl. Use pheromone traps and prophylactic neem sprays."
+    ],
+    "source": "PJTSAU Hyderabad & ANGRAU Guntur Advisory Service"
+  },
+  {
+    "id": "REG_WB_OD_04",
+    "region": "Eastern Lower Gangetic Plains (West Bengal & Odisha)",
+    "primary_crops": ["Jute", "Paddy (Aman, Boro)", "Potato", "Mustard"],
+    "agro_climatic_context": "Humid subtropical, alluvial river basins, heavy rainfall, high water table, and prone to pre-monsoon squalls (Kalbaishakhi).",
+    "key_directives": [
+      "Jute: Sowing from mid-March to April enables harvest by July at 120 days, allowing timely transplanting of subsequent Aman paddy.",
+      "Retting of Jute: Use microbial retting consortium (CRIJAF Sona) @ 4 kg per quintal green jute plants in retting ponds to shorten retting time from 21 days to 12 days and upgrade fiber quality by 2 grades."
+    ],
+    "source": "BCKV Mohanpur & ICAR-CRIJAF Barrackpore Extension"
+  }
+]

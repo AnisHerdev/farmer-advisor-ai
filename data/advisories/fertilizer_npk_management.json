@@ -1,0 +1,107 @@
+[
+  {
+    "id": "FERT_COT_01",
+    "crop": "Cotton",
+    "crop_category": "Cash / Fiber Crop",
+    "recommended_npk_ratio": "120:60:60 kg N:P2O5:K2O per hectare (Irrigated Bt Cotton); 60:30:30 for Rainfed.",
+    "basal_dose": "Apply 100% of Phosphorus (Single Super Phosphate / DAP) and 50% of Potassium (MOP), plus 20% of Nitrogen at final land preparation / sowing.",
+    "top_dressing_splits": [
+      {
+        "timing": "30 days after sowing (Vegetative stage)",
+        "nutrient": "30% Nitrogen (Urea) + 25 kg/ha Zinc Sulphate (if soil is deficient)"
+      },
+      {
+        "timing": "60 days after sowing (Squaring / Flowering stage)",
+        "nutrient": "30% Nitrogen + remaining 50% Potassium"
+      },
+      {
+        "timing": "75 to 90 days after sowing (Boll development)",
+        "nutrient": "Remaining 20% Nitrogen as top dressing or foliar spray of 19:19:19 @ 1% or Potassium Nitrate (13:0:45) @ 1% to arrest square shedding"
+      }
+    ],
+    "micronutrients_and_organic": "Apply 10 tonnes Farm Yard Manure (FYM) or 2.5 tonnes vermicompost per hectare. Foliar spray of Magnesium Sulphate (1%) and Boron (0.1%) during boll formation reduces leaf reddening and improves boll weight.",
+    "key_warning": "Avoid excess Nitrogen during vegetative stage as it promotes vegetative rank growth, attracts sucking pests (jassids, whiteflies), and delays maturity.",
+    "source": "ICAR-CICR Nutrient Management Guidelines"
+  },
+  {
+    "id": "FERT_JUT_02",
+    "crop": "Jute",
+    "crop_category": "Cash / Fiber Crop",
+    "recommended_npk_ratio": "Olitorius (Tossa): 60:30:30 kg N:P2O5:K2O per ha; Capsularis (White): 80:40:40 kg/ha.",
+    "basal_dose": "Apply all P2O5 (SSP) and all K2O (MOP) plus 25% of Nitrogen at the time of final ploughing. If soil pH is below 5.5, apply agricultural lime @ 2 to 4 quintals/ha 20 days before sowing.",
+    "top_dressing_splits": [
+      {
+        "timing": "3 to 4 weeks after sowing (First weeding & thinning)",
+        "nutrient": "50% Nitrogen (Urea @ 15 kg/acre)"
+      },
+      {
+        "timing": "6 to 7 weeks after sowing (Rapid elongation stage)",
+        "nutrient": "Remaining 25% Nitrogen (Urea @ 8-10 kg/acre) applied after rain or light irrigation"
+      }
+    ],
+    "micronutrients_and_organic": "Incorporate well-decomposed FYM @ 5-7 tonnes/ha. In acidic laterite soils, foliar spray of 0.2% Borax prevents terminal bud necrosis.",
+    "key_warning": "Never apply Urea on dry soil or in bright midday sun. Apply after weeding and rake into topsoil.",
+    "source": "ICAR-CRIJAF Soil Health & Nutrient Protocol"
+  },
+  {
+    "id": "FERT_TOM_03",
+    "crop": "Tomato",
+    "crop_category": "Vegetable / Horticulture",
+    "recommended_npk_ratio": "Hybrids: 180:120:150 kg N:P2O5:K2O per hectare; Open Pollinated: 100:60:60 kg/ha.",
+    "basal_dose": "Apply 50% Nitrogen, 100% Phosphorus, and 50% Potassium along with 25 tonnes FYM and 25 kg Zinc Sulphate per hectare before planting.",
+    "top_dressing_splits": [
+      {
+        "timing": "25 to 30 days after transplanting (Vegetative / Early flower)",
+        "nutrient": "25% Nitrogen + 25% Potassium"
+      },
+      {
+        "timing": "50 to 60 days after transplanting (Fruit setting & sizing)",
+        "nutrient": "Remaining 25% Nitrogen + 25% Potassium"
+      }
+    ],
+    "fertigation_option": "Under drip fertigation, feed water-soluble fertilizers (WSF 19:19:19, 12:61:00, 13:0:45) twice a week according to crop stage.",
+    "micronutrients_and_organic": "Spray Calcium Chloride @ 0.5% or Calcium Nitrate during fruit sizing to avoid Blossom End Rot (BER). Spray Boron @ 0.1% to improve fruit firmness and prevent cracking.",
+    "key_warning": "Imbalanced Nitrogen without Calcium causes severe blossom end rot (black sunken fruit bottoms).",
+    "source": "ICAR-IIHR Tomato Production Bulletin"
+  },
+  {
+    "id": "FERT_WHE_04",
+    "crop": "Wheat",
+    "crop_category": "Cereal / Staple Food Crop",
+    "recommended_npk_ratio": "120:60:40 kg N:P2O5:K2O per hectare (Irrigated Timely Sown); 150:60:40 for high-yielding varieties.",
+    "basal_dose": "Apply 50% Nitrogen (approx 65 kg Urea/ha), 100% Phosphorus (130 kg DAP or 375 kg SSP), and 100% Potash (65 kg MOP) at sowing through seed-cum-fertilizer drill below seed level.",
+    "top_dressing_splits": [
+      {
+        "timing": "First Irrigation at 21-25 DAS (Crown Root Initiation stage)",
+        "nutrient": "25% Nitrogen (Urea @ 65 kg/ha) just before or immediately after first irrigation"
+      },
+      {
+        "timing": "Second Irrigation at 40-45 DAS (Tillering / Jointing stage)",
+        "nutrient": "Remaining 25% Nitrogen (Urea @ 65 kg/ha)"
+      }
+    ],
+    "micronutrients_and_organic": "If soil is Zinc-deficient, apply 25 kg Zinc Sulphate (21% Zn) as basal per ha or foliar spray 0.5% ZnSO4 + 2.5% Urea at tillering.",
+    "key_warning": "Do not apply third dose of Nitrogen after earhead emergence as it causes severe crop lodging and increases grain shattering.",
+    "source": "ICAR-IIWBR Crop Nutrition Manual"
+  },
+  {
+    "id": "FERT_RIC_05",
+    "crop": "Paddy / Rice",
+    "crop_category": "Cereal / Staple Food Crop",
+    "recommended_npk_ratio": "Medium duration varieties: 120:60:60 kg N:P2O5:K2O per hectare; Hybrids: 150:75:75 kg/ha.",
+    "basal_dose": "Apply 50% Nitrogen, 100% Phosphorus, and 50% Potash into puddle mud before final levelling.",
+    "top_dressing_splits": [
+      {
+        "timing": "Active tillering (21-25 days after transplanting)",
+        "nutrient": "25% Nitrogen"
+      },
+      {
+        "timing": "Panicle Initiation stage (45-50 days after transplanting)",
+        "nutrient": "Remaining 25% Nitrogen + 50% Potassium (MOP)"
+      }
+    ],
+    "micronutrients_and_organic": "Apply Neem-coated urea to enhance nitrogen use efficiency by 15-20%. Apply 25 kg Zinc Sulphate heptahydrate per hectare at puddling. Use Azospirillum and Phosphobacteria biofertilizers.",
+    "key_warning": "Drain standing water before top dressing urea and re-irrigate after 24 to 48 hours to minimize ammonia volatilization.",
+    "source": "ICAR-NRRI Paddy Management Protocol"
+  }
+]

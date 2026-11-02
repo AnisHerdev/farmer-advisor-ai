@@ -1,0 +1,127 @@
+[
+  {
+    "id": "IRR_WHE_01",
+    "crop": "Wheat",
+    "crop_category": "Cereal / Staple Food Crop",
+    "total_water_requirement": "450 to 500 mm across 4 to 6 irrigations",
+    "critical_stages_order_of_importance": [
+      {
+        "stage": "Crown Root Initiation (CRI)",
+        "timing_das": "20 to 25 days after sowing",
+        "priority": "CRITICAL - Most vital single irrigation. Skipping this reduces yield by 35% to 40% as crown root system fails to establish.",
+        "depth": "6 cm to 7 cm"
+      },
+      {
+        "stage": "Tillering stage",
+        "timing_das": "40 to 45 days after sowing",
+        "priority": "HIGH - Ensures maximum productive tillers per plant.",
+        "depth": "6 cm"
+      },
+      {
+        "stage": "Late jointing / Booting stage",
+        "timing_das": "60 to 65 days after sowing",
+        "priority": "HIGH - Determines spikelet count and head size.",
+        "depth": "6 cm"
+      },
+      {
+        "stage": "Flowering stage",
+        "timing_das": "80 to 85 days after sowing",
+        "priority": "CRITICAL - Water stress here causes pollen sterility and poor fertilization.",
+        "depth": "6 cm"
+      },
+      {
+        "stage": "Milking / Dough stage",
+        "timing_das": "100 to 105 days after sowing",
+        "priority": "MEDIUM - Grain filling and test weight. Avoid irrigating on windy days to prevent lodging.",
+        "depth": "5 cm"
+      }
+    ],
+    "contingency_limited_water": "If only 1 irrigation is available: Apply strictly at CRI (21 DAS). If 2 irrigations are available: Apply at CRI (21 DAS) and Flowering (80 DAS). If 3 irrigations available: CRI, Jointing, and Flowering.",
+    "source": "ICAR-IIWBR Irrigation Scheduling Directives"
+  },
+  {
+    "id": "IRR_COT_02",
+    "crop": "Cotton",
+    "crop_category": "Cash / Fiber Crop",
+    "total_water_requirement": "650 to 750 mm across 6 to 9 irrigations (or drip)",
+    "critical_stages_order_of_importance": [
+      {
+        "stage": "Early vegetative stage",
+        "timing_das": "25 to 30 days after sowing",
+        "priority": "MODERATE - Light irrigation; deep root development is encouraged by slight early moisture restriction.",
+        "depth": "5 cm"
+      },
+      {
+        "stage": "Square formation (Squaring)",
+        "timing_das": "45 to 60 days after sowing",
+        "priority": "HIGH - Water stress triggers premature square dropping.",
+        "depth": "7 cm"
+      },
+      {
+        "stage": "Peak Flowering",
+        "timing_das": "70 to 90 days after sowing",
+        "priority": "CRITICAL - Water deficit severely impacts flower retention and fertilization.",
+        "depth": "7 cm"
+      },
+      {
+        "stage": "Boll development and sizing",
+        "timing_das": "95 to 120 days after sowing",
+        "priority": "CRITICAL - Determines boll weight, seed development, and fiber length.",
+        "depth": "7 cm"
+      }
+    ],
+    "drip_irrigation_guideline": "Inline drip system with 16 mm lateral per paired row, dripper discharge 2.0 to 4.0 LPH at 60 cm spacing. Drip saves 40-50% water and boosts yield by 25%.",
+    "contingency_limited_water": "Adopt alternate furrow irrigation or broad bed and furrow (BBF) to save 30% water while maintaining root aeration.",
+    "source": "ICAR-CICR Water Management Handbook"
+  },
+  {
+    "id": "IRR_TOM_03",
+    "crop": "Tomato",
+    "crop_category": "Vegetable / Horticulture",
+    "total_water_requirement": "500 to 650 mm; requires frequent light irrigations due to shallow fibrous root system",
+    "critical_stages_order_of_importance": [
+      {
+        "stage": "Post-transplant establishment",
+        "timing_das": "1 to 7 days after transplanting",
+        "priority": "HIGH - Immediate irrigation upon transplanting, followed by life-saving irrigation on 3rd day.",
+        "depth": "Light furrow or drip 1.5 hr daily"
+      },
+      {
+        "stage": "Flowering and Fruit Set",
+        "timing_das": "30 to 45 days after transplanting",
+        "priority": "CRITICAL - Moisture stress causes flower drop; over-watering triggers root rot.",
+        "depth": "Consistent moisture at 70% field capacity"
+      },
+      {
+        "stage": "Fruit sizing and enlargement",
+        "timing_das": "50 to 80 days after transplanting",
+        "priority": "CRITICAL - Fluctuation between extreme dry soil and heavy irrigation causes severe fruit skin cracking and Blossom End Rot (BER).",
+        "depth": "Regular uniform schedule every 4-6 days"
+      }
+    ],
+    "drip_irrigation_guideline": "Use 25-30 micron silver-black plastic mulch with drip laterals beneath. Drip fertigation frequency: daily in summer, alternate days in winter.",
+    "source": "ICAR-IIHR Water & Micro-Irrigation Protocol"
+  },
+  {
+    "id": "IRR_JUT_04",
+    "crop": "Jute",
+    "crop_category": "Cash / Fiber Crop",
+    "total_water_requirement": "500 to 600 mm; high humidity (>70%) and warm conditions",
+    "critical_stages_order_of_importance": [
+      {
+        "stage": "Germination and seedling emergence",
+        "timing_das": "0 to 15 days after sowing",
+        "priority": "HIGH - Needs moist topsoil. Pre-sowing irrigation is ideal. Avoid crust formation.",
+        "depth": "Light irrigation"
+      },
+      {
+        "stage": "Vegetative elongation phase",
+        "timing_das": "30 to 60 days after sowing",
+        "priority": "CRITICAL - Fast stem height growth requires continuous moderate moisture. Stagnant water must be drained for Olitorius jute.",
+        "depth": "Field capacity"
+      }
+    ],
+    "contingency_limited_water": "Pre-sowing irrigation ensures uniform stand. Jute tolerates later dry spells better than early drought.",
+    "source": "ICAR-CRIJAF Agronomy Guide"
+  }
+]

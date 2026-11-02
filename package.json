@@ -1,0 +1,16 @@
+{
+  "name": "farmer-advisor",
+  "version": "1.0.0",
+  "description": "Multilingual Sovereign AI Agronomic Advisory Assistant with Verified ICAR Groundedness",
+  "private": true,
+  "scripts": {
+    "setup": "npm install && cd frontend && npm install && cd .. && powershell -ExecutionPolicy Bypass -File scripts/setup_env.ps1",
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"green,blue\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "powershell -ExecutionPolicy Bypass -Command \"if (Test-Path .venv) { .\\.venv\\Scripts\\python.exe -m uvicorn backend.main:app --reload --port 8000 } elseif (Get-Command python -ErrorAction SilentlyContinue) { python -m uvicorn backend.main:app --reload --port 8000 } else { py -3.10 -m uvicorn backend.main:app --reload --port 8000 }\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "eval": "powershell -ExecutionPolicy Bypass -Command \"if (Test-Path .venv) { .\\.venv\\Scripts\\python.exe -m backend.evaluation.evaluator } elseif (Get-Command python -ErrorAction SilentlyContinue) { python -m backend.evaluation.evaluator } else { py -3.10 -m backend.evaluation.evaluator }\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

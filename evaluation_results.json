@@ -1,0 +1,598 @@
+{
+  "overall_pass_rate": 80.0,
+  "avg_groundedness": 0.8500000000000005,
+  "avg_factual_correctness": 0.7625,
+  "retrieval_precision": 1.0,
+  "category_stats": {
+    "Sowing Calendar": {
+      "total": 10,
+      "passed": 10,
+      "groundedness_sum": 8.499999999999998
+    },
+    "Fertilizer & NPK": {
+      "total": 8,
+      "passed": 5,
+      "groundedness_sum": 6.799999999999999
+    },
+    "Irrigation Management": {
+      "total": 8,
+      "passed": 6,
+      "groundedness_sum": 6.799999999999999
+    },
+    "Pest & Disease": {
+      "total": 7,
+      "passed": 5,
+      "groundedness_sum": 5.949999999999999
+    },
+    "Multilingual QA": {
+      "total": 7,
+      "passed": 6,
+      "groundedness_sum": 5.949999999999999
+    }
+  },
+  "test_cases_count": 40,
+  "failures_count": 8,
+  "failures": [
+    {
+      "id": "TC_FRT_16",
+      "query": "\u0917\u0947\u0939\u0942\u0902 \u092e\u0947\u0902 \u092f\u0942\u0930\u093f\u092f\u093e \u0915\u0940 \u091f\u0949\u092a \u0921\u094d\u0930\u0947\u0938\u093f\u0902\u0917 \u0915\u092c \u0914\u0930 \u0915\u0948\u0938\u0947 \u0915\u0930\u0928\u0940 \u091a\u093e\u0939\u093f\u090f?",
+      "category": "Fertilizer & NPK",
+      "lang": "hi",
+      "retrieval_hit": true,
+      "groundedness": 0.85,
+      "factual_score": 0.0,
+      "matched_facts": [],
+      "missing_facts": [
+        [
+          "Crown Root",
+          "CRI",
+          "\u0924\u093e\u091c \u091c\u0921\u093c"
+        ],
+        [
+          "Urea",
+          "\u092f\u0942\u0930\u093f\u092f\u093e"
+        ],
+        [
+          "Irrigation",
+          "\u0938\u093f\u0902\u091a\u093e\u0908"
+        ]
+      ]
+    },
+    {
+      "id": "TC_FRT_17",
+      "query": "What fertilizer dose is recommended for Olitorius (Tossa) Jute?",
+      "category": "Fertilizer & NPK",
+      "lang": "en",
+      "retrieval_hit": true,
+      "groundedness": 0.85,
+      "factual_score": 0.3333333333333333,
+      "matched_facts": [
+        "Nitrogen"
+      ],
+      "missing_facts": [
+        "60:30:30",
+        "Phosphorus"
+      ]
+    },
+    {
+      "id": "TC_FRT_18",
+      "query": "Why should farmers use Neem-coated urea and Zinc sulphate in Paddy fields?",
+      "category": "Fertilizer & NPK",
+      "lang": "en",
+      "retrieval_hit": true,
+      "groundedness": 0.85,
+      "factual_score": 0.3333333333333333,
+      "matched_facts": [
+        "Nitrogen"
+      ],
+      "missing_facts": [
+        "Neem",
+        "Zinc"
+      ]
+    },
+    {
+      "id": "TC_IRR_24",
+      "query": "Why is alternate furrow irrigation recommended during water stress in Cotton?",
+      "category": "Irrigation Management",
+      "lang": "en",
+      "retrieval_hit": true,
+      "groundedness": 0.85,
+      "factual_score": 0.3333333333333333,
+      "matched_facts": [
+        "water"
+      ],
+      "missing_facts": [
+        "furrow",
+        "save"
+      ]
+    },
+    {
+      "id": "TC_IRR_26",
+      "query": "How can plastic mulch with drip irrigation benefit Tomato cultivation?",
+      "category": "Irrigation Management",
+      "lang": "en",
+      "retrieval_hit": true,
+      "groundedness": 0.85,
+      "factual_score": 0.0,
+      "matched_facts": [],
+      "missing_facts": [
+        "mulch",
+        "drip",
+        "Tomato"
+      ]
+    },
+    {
+      "id": "TC_PST_30",
+      "query": "\u091f\u092e\u093e\u091f\u0930 \u092e\u0947\u0902 \u092a\u0924\u094d\u0924\u093e \u092e\u0930\u094b\u0921\u093c \u0930\u094b\u0917 (\u0932\u0940\u092b \u0915\u0930\u094d\u0932) \u0915\u0940 \u0930\u094b\u0915\u0925\u093e\u092e \u0915\u0948\u0938\u0947 \u0915\u0930\u0947\u0902?",
+      "category": "Pest & Disease",
+      "lang": "hi",
+      "retrieval_hit": true,
+      "groundedness": 0.85,
+      "factual_score": 0.3333333333333333,
+      "matched_facts": [
+        "yellow"
+      ],
+      "missing_facts": [
+        [
+          "whitefly",
+          "\u0938\u092b\u0947\u0926 \u092e\u0915\u094d\u0916\u0940"
+        ],
+        [
+          "curling",
+          "\u092a\u0924\u094d\u0924\u093e",
+          "\u092e\u0930\u094b\u0921\u093c"
+        ],
+        [
+          "yellow",
+          "\u092a\u0940\u0932\u0947",
+          "\u091f\u094d\u0930\u0948\u092a"
+        ]
+      ]
+    },
+    {
+      "id": "TC_PST_31",
+      "query": "What are the early symptoms of Stem Rot in Jute and how to manage it?",
+      "category": "Pest & Disease",
+      "lang": "en",
+      "retrieval_hit": true,
+      "groundedness": 0.85,
+      "factual_score": 0.3333333333333333,
+      "matched_facts": [
+        "Jute"
+      ],
+      "missing_facts": [
+        "Stem Rot",
+        "Carbendazim"
+      ]
+    },
+    {
+      "id": "TC_ML_34",
+      "query": "\u0c2e\u0c39\u0c3e\u0c30\u0c3e\u0c37\u0c4d\u0c1f\u0c4d\u0c30\u0c32\u0c4b \u0c2a\u0c24\u0c4d\u0c24\u0c3f \u0c0e\u0c2a\u0c4d\u0c2a\u0c41\u0c21\u0c41 \u0c35\u0c3f\u0c24\u0c4d\u0c24\u0c3e\u0c32\u0c3f \u0c2e\u0c30\u0c3f\u0c2f\u0c41 \u0c2e\u0c4a\u0c26\u0c1f\u0c3f \u0c0e\u0c30\u0c41\u0c35\u0c41 \u0c0f\u0c26\u0c3f?",
+      "category": "Multilingual QA",
+      "lang": "te",
+      "retrieval_hit": true,
+      "groundedness": 0.85,
+      "factual_score": 0.3333333333333333,
+      "matched_facts": [
+        "Fertilizer"
+      ],
+      "missing_facts": [
+        [
+          "Cotton",
+          "\u0c2a\u0c24\u0c4d\u0c24\u0c3f"
+        ],
+        [
+          "May",
+          "June",
+          "\u0c35\u0c3f\u0c24\u0c4d\u0c24\u0c47"
+        ],
+        [
+          "Fertilizer",
+          "\u0c0e\u0c30\u0c41\u0c35\u0c41"
+        ]
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "TC_SOW_01",
+      "category": "Sowing Calendar",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.667,
+      "duration_ms": 471.7
+    },
+    {
+      "id": "TC_SOW_02",
+      "category": "Sowing Calendar",
+      "lang": "hi",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.667,
+      "duration_ms": 323.7
+    },
+    {
+      "id": "TC_SOW_03",
+      "category": "Sowing Calendar",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 463.5
+    },
+    {
+      "id": "TC_SOW_04",
+      "category": "Sowing Calendar",
+      "lang": "hi",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 445.9
+    },
+    {
+      "id": "TC_SOW_05",
+      "category": "Sowing Calendar",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 455.7
+    },
+    {
+      "id": "TC_SOW_06",
+      "category": "Sowing Calendar",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 455.2
+    },
+    {
+      "id": "TC_SOW_07",
+      "category": "Sowing Calendar",
+      "lang": "hi",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 413.8
+    },
+    {
+      "id": "TC_SOW_08",
+      "category": "Sowing Calendar",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 455.8
+    },
+    {
+      "id": "TC_SOW_09",
+      "category": "Sowing Calendar",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 413.4
+    },
+    {
+      "id": "TC_SOW_10",
+      "category": "Sowing Calendar",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 451.2
+    },
+    {
+      "id": "TC_FRT_11",
+      "category": "Fertilizer & NPK",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.667,
+      "duration_ms": 453.1
+    },
+    {
+      "id": "TC_FRT_12",
+      "category": "Fertilizer & NPK",
+      "lang": "hi",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 457.5
+    },
+    {
+      "id": "TC_FRT_13",
+      "category": "Fertilizer & NPK",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.667,
+      "duration_ms": 462.2
+    },
+    {
+      "id": "TC_FRT_14",
+      "category": "Fertilizer & NPK",
+      "lang": "hi",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.5,
+      "duration_ms": 454.8
+    },
+    {
+      "id": "TC_FRT_15",
+      "category": "Fertilizer & NPK",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 454.4
+    },
+    {
+      "id": "TC_FRT_16",
+      "category": "Fertilizer & NPK",
+      "lang": "hi",
+      "passed": false,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.0,
+      "duration_ms": 446.5
+    },
+    {
+      "id": "TC_FRT_17",
+      "category": "Fertilizer & NPK",
+      "lang": "en",
+      "passed": false,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.333,
+      "duration_ms": 455.0
+    },
+    {
+      "id": "TC_FRT_18",
+      "category": "Fertilizer & NPK",
+      "lang": "en",
+      "passed": false,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.333,
+      "duration_ms": 465.6
+    },
+    {
+      "id": "TC_IRR_19",
+      "category": "Irrigation Management",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 440.8
+    },
+    {
+      "id": "TC_IRR_20",
+      "category": "Irrigation Management",
+      "lang": "hi",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 442.3
+    },
+    {
+      "id": "TC_IRR_21",
+      "category": "Irrigation Management",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 454.3
+    },
+    {
+      "id": "TC_IRR_22",
+      "category": "Irrigation Management",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 423.7
+    },
+    {
+      "id": "TC_IRR_23",
+      "category": "Irrigation Management",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.667,
+      "duration_ms": 444.1
+    },
+    {
+      "id": "TC_IRR_24",
+      "category": "Irrigation Management",
+      "lang": "en",
+      "passed": false,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.333,
+      "duration_ms": 436.1
+    },
+    {
+      "id": "TC_IRR_25",
+      "category": "Irrigation Management",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 455.0
+    },
+    {
+      "id": "TC_IRR_26",
+      "category": "Irrigation Management",
+      "lang": "en",
+      "passed": false,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.0,
+      "duration_ms": 433.3
+    },
+    {
+      "id": "TC_PST_27",
+      "category": "Pest & Disease",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 453.0
+    },
+    {
+      "id": "TC_PST_28",
+      "category": "Pest & Disease",
+      "lang": "hi",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.667,
+      "duration_ms": 448.6
+    },
+    {
+      "id": "TC_PST_29",
+      "category": "Pest & Disease",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.667,
+      "duration_ms": 440.6
+    },
+    {
+      "id": "TC_PST_30",
+      "category": "Pest & Disease",
+      "lang": "hi",
+      "passed": false,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.333,
+      "duration_ms": 440.7
+    },
+    {
+      "id": "TC_PST_31",
+      "category": "Pest & Disease",
+      "lang": "en",
+      "passed": false,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.333,
+      "duration_ms": 448.3
+    },
+    {
+      "id": "TC_PST_32",
+      "category": "Pest & Disease",
+      "lang": "en",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 450.0
+    },
+    {
+      "id": "TC_PST_33",
+      "category": "Pest & Disease",
+      "lang": "hi",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 442.2
+    },
+    {
+      "id": "TC_ML_34",
+      "category": "Multilingual QA",
+      "lang": "te",
+      "passed": false,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.333,
+      "duration_ms": 439.3
+    },
+    {
+      "id": "TC_ML_35",
+      "category": "Multilingual QA",
+      "lang": "ta",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 435.7
+    },
+    {
+      "id": "TC_ML_36",
+      "category": "Multilingual QA",
+      "lang": "kn",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 416.1
+    },
+    {
+      "id": "TC_ML_37",
+      "category": "Multilingual QA",
+      "lang": "mr",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 449.0
+    },
+    {
+      "id": "TC_ML_38",
+      "category": "Multilingual QA",
+      "lang": "pa",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 1.0,
+      "duration_ms": 458.9
+    },
+    {
+      "id": "TC_ML_39",
+      "category": "Multilingual QA",
+      "lang": "mr",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.667,
+      "duration_ms": 425.7
+    },
+    {
+      "id": "TC_ML_40",
+      "category": "Multilingual QA",
+      "lang": "pa",
+      "passed": true,
+      "retrieval_hit": true,
+      "groundedness_score": 0.85,
+      "factual_score": 0.667,
+      "duration_ms": 443.3
+    }
+  ]
+}

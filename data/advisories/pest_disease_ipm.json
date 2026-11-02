@@ -1,0 +1,76 @@
+[
+  {
+    "id": "PEST_COT_01",
+    "crop": "Cotton",
+    "pest_disease": "Pink Bollworm (Pectinophora gossypiella)",
+    "type": "Insect Pest",
+    "symptoms": "Rosetted flowers ('rosette' appearance due to petals webbed together), boreholes plugged with excreta on developing bolls, damaged seeds, stained lint, premature boll dropping.",
+    "economic_threshold_level_etl": "8 moths/trap/night for 3 consecutive nights OR 10% infested green bolls with larvae.",
+    "integrated_pest_management_ipm": [
+      "Install pheromone traps with Gossyplure @ 2 per acre for monitoring, 8-10 per acre for mass trapping.",
+      "Release Trichogramma bactrae egg parasitoid @ 60,000 per acre (3 releases at weekly intervals from 45 DAS).",
+      "Spray Neem Seed Kernel Extract (NSKE 5%) or Azadirachtin 1500 ppm @ 5 ml/litre at early square formation.",
+      "If ETL is breached: Spray Chlorantraniliprole 18.5 SC @ 0.3 ml/L or Emamectin Benzoate 5 SG @ 0.5 g/L or Profenofos 50 EC @ 2 ml/L."
+    ],
+    "cultural_precautions": "Avoid extending the cotton crop into ratoon or multi-season picking. Shred cotton stalks immediately after harvest to destroy diapausing larvae.",
+    "source": "ICAR-CICR Cotton IPM Strategy"
+  },
+  {
+    "id": "PEST_TOM_02",
+    "crop": "Tomato",
+    "pest_disease": "Tomato Leaf Curl Virus (ToLCV) & Whitefly vector (Bemisia tabaci)",
+    "type": "Viral Disease & Insect Vector",
+    "symptoms": "Severe curling, cupping, and puckering of leaves, vein clearing, stunted bushy plant growth, dropping of floral buds, almost zero fruit setting.",
+    "vector_transmission": "Transmitted by whitefly (Bemisia tabaci). The virus cannot be cured once inside the plant; management relies on vector control and resistant varieties.",
+    "integrated_pest_management_ipm": [
+      "Grow virus-resistant / tolerant hybrids (e.g. Arka Rakshak, Arka Samrat, US-440).",
+      "Erect 20-25 yellow sticky traps per acre to capture adult whiteflies.",
+      "Raise nursery inside 40-mesh insect-proof nylon net houses.",
+      "Spray 5% NSKE or Neem oil (3 ml/L) as prophylactic deterrent.",
+      "Chemical vector control: Drench nursery with Imidacloprid 17.8 SL @ 0.3 ml/L. In field, spray Diafenthiuron 50 WP @ 1 g/L or Spiromesifen 22.9 SC @ 1.25 ml/L on undersides of leaves."
+    ],
+    "cultural_precautions": "Rogue out and destroy infected plants immediately upon early symptom appearance to prevent field spread.",
+    "source": "ICAR-IIHR Tomato Disease Advisory"
+  },
+  {
+    "id": "PEST_TOM_03",
+    "crop": "Tomato",
+    "pest_disease": "Early Blight & Late Blight (Alternaria solani & Phytophthora infestans)",
+    "type": "Fungal Disease",
+    "symptoms": "Early blight: Concentric target-board rings on older leaves, yellow halo, defoliation. Late blight: Water-soaked irregular dark lesions on leaves and green fruits, white fungal growth on undersides during cool humid weather.",
+    "integrated_pest_management_ipm": [
+      "Seed treatment with Trichoderma viride @ 5g/kg or Captan @ 2g/kg.",
+      "Prophylactic spray of Mancozeb 75 WP @ 2.5 g/L or Copper Oxychloride @ 3 g/L.",
+      "Upon first appearance: Spray Azoxystrobin + Difenoconazole @ 1 ml/L or Cymoxanil + Mancozeb @ 2 g/L (for late blight) or Tebuconazole @ 1 ml/L (for early blight)."
+    ],
+    "source": "ICAR-IIHR Plant Pathology Guidelines"
+  },
+  {
+    "id": "PEST_JUT_04",
+    "crop": "Jute",
+    "pest_disease": "Stem Rot / Root Rot (Macrophomina phaseolina) and Jute Semilooper",
+    "type": "Fungal Disease & Pest",
+    "symptoms": "Stem rot: Brownish black lesions on stem near ground level or nodal points; shredded fibrous vascular tissues with tiny black sclerotia. Semilooper: Caterpillar cuts apical shoots and defoliates young leaves.",
+    "integrated_pest_management_ipm": [
+      "Correct acidic soil pH by applying agricultural lime (calcium carbonate) @ 2-4 q/ha.",
+      "Seed treatment with Carbendazim 50 WP @ 2 g/kg seed.",
+      "For Semilooper: Spray Bacillus thuringiensis (Bt) @ 1.5 g/L or Chlorantraniliprole 18.5 SC @ 0.3 ml/L.",
+      "For Stem Rot: Foliar spray of Carbendazim 12% + Mancozeb 63% WP @ 2 g/L upon symptom detection."
+    ],
+    "source": "ICAR-CRIJAF Integrated Protection Advisory"
+  },
+  {
+    "id": "PEST_WHE_05",
+    "crop": "Wheat",
+    "pest_disease": "Yellow / Stripe Rust (Puccinia striiformis) & Aphids",
+    "type": "Fungal Rust & Insect",
+    "symptoms": "Yellow Rust: Bright yellow powdery stripes of urediniospores arranged linearly along leaf veins; easily stains fingers yellow. Aphids: Clustered sucking insects on ears and flag leaves secreting honeydew.",
+    "integrated_pest_management_ipm": [
+      "Sow rust-resistant varieties (HD-3086, DBW-187, DBW-222, PBW-725).",
+      "Avoid excess early Nitrogen fertilizer which favors lush vegetative rust susceptibility.",
+      "On rust notice: Immediately spray Tebuconazole 25.9 EC @ 1 ml/L or Propiconazole 25 EC (Tilt) @ 1 ml/L (500 ml in 500 L water per ha).",
+      "For Aphids: Conserve ladybird beetles; if population exceeds 5 aphids per earhead, spray Thiamethoxam 25 WG @ 0.2 g/L."
+    ],
+    "source": "ICAR-IIWBR Rust Surveillance Advisory"
+  }
+]
